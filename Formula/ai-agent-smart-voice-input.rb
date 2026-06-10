@@ -1,8 +1,8 @@
 class AiAgentSmartVoiceInput < Formula
   desc "macOS voice input tool for AI agent terminals (opencode)"
   homepage "https://github.com/jackieju/AIAgentSmartVoiceInput"
-  url "https://github.com/jackieju/AIAgentSmartVoiceInput/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "4ff1916610d9d42d18ec1c5e83661be7bbd7ab2503995bade1540fd743c0198f"
+  url "https://github.com/jackieju/AIAgentSmartVoiceInput/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "e8087452ee597811c18812114c155afd22cfecfbfbfe4370017cdb987e9e28ba"
   license "MIT"
 
   depends_on :macos
@@ -20,6 +20,7 @@ class AiAgentSmartVoiceInput < Formula
     bin.install "inject-helper"
 
     bin.install "start-daemon.command"
+    prefix.install "com.voiceinput.app.plist"
 
     (prefix/"VoiceInput.app/Contents/MacOS").mkpath
     cp bin/"voiceinput", prefix/"VoiceInput.app/Contents/MacOS/VoiceInput"
@@ -51,8 +52,8 @@ class AiAgentSmartVoiceInput < Formula
           "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo.bin"
 
       Hotkeys:
-        Option+Shift+V  - Start/stop recording
-        Escape          - Cancel recording
+        Cmd+5 (default)  - Start/stop recording (configurable in Settings)
+        Escape           - Cancel recording
     EOS
   end
 
