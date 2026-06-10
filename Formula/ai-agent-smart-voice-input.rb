@@ -1,8 +1,8 @@
 class AiAgentSmartVoiceInput < Formula
   desc "macOS voice input tool for AI agent terminals (opencode)"
   homepage "https://github.com/jackieju/AIAgentSmartVoiceInput"
-  url "https://github.com/jackieju/AIAgentSmartVoiceInput/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "e8087452ee597811c18812114c155afd22cfecfbfbfe4370017cdb987e9e28ba"
+  url "https://github.com/jackieju/AIAgentSmartVoiceInput/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "323262c7708c675f6fdd496b8c9640503f43d6c846f72eba35ff22cae738d849"
   license "MIT"
 
   depends_on :macos
