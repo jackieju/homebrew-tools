@@ -32,6 +32,7 @@ class AiAgentSmartVoiceInput < Formula
 
   def post_install
     mkdir_p "#{Dir.home}/.local/share/whisper-cpp/models"
+    ln_sf prefix/"VoiceInput.app", "/Applications/VoiceInput.app"
   end
 
   def caveats
